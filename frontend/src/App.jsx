@@ -21,7 +21,7 @@ export default function App() {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:5000/api/shorten", { longUrl });
+      const res = await axios.post("https://url-shortener-9ivc.onrender.com/api/shorten", { longUrl });
       setShortUrl(res.data.shortUrl);
       setLongUrl("");
     } catch (error) {
