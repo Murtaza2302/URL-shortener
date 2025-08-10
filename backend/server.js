@@ -30,7 +30,7 @@ app.post("/api/shorten", async (req, res) => {
   const shortCode = nanoid(6);
   const newUrl = new Url({ longUrl, shortCode });
   await newUrl.save();
-  res.json({ shortUrl: `http://localhost:5000/${shortCode}` });
+  res.json({ shortUrl: `https://url-shortener-9ivc.onrender.com/${shortCode}` });
 });
 
 app.get("/:shortcode", async (req, res, next) => {
